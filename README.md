@@ -1,5 +1,5 @@
 # vertico-truncate
-Judicious truncation for long candidates in vertico completion.
+Judicious truncation for long candidates in [vertico](https://github.com/minad/vertico) completion.
 
 Left truncates lines in two situations:
 
