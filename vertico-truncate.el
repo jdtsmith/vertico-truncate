@@ -103,7 +103,7 @@ property at the first match location."
      ;; left-truncate recent files in consult-buffer
      ((and-let* ((type (get-text-property 0 'multi-category cand)))
 	(eq (car-safe type) 'file))
-      (let* ((suffix-len (consult--display-width (nth 2 args)))
+      (let* ((suffix-len (length (nth 2 args)))
 	     (w (max 30 (- ww suffix-len))))
 	(when (> len w)
 	  (setcar args
