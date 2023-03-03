@@ -15,3 +15,7 @@ Left-truncates completion lines in vertico two situations:
    a negative performance impact in Emacs.
    
 Others may be considered.
+
+## Installation/usage
+
+Install using straight, use-package with load-path, etc.  To enable, simply arrange to call `(vertico-truncate-mode 1)` in your init.
