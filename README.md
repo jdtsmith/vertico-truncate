@@ -3,7 +3,7 @@ Judicious truncation for long candidates in [vertico](https://github.com/minad/v
 
 Left-truncates completion lines in vertico for two situations:
 
-1. In consult-buffer, longer recentf files, which would otherwise move the
+1. Longer files, which would otherwise move the
  suffix over (e.g. marginalia data), are left-truncated to avoid
     this.
 2. `consult-line` and `consult-*grep` matches on long lines are
