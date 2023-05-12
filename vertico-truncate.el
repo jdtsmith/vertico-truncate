@@ -100,10 +100,11 @@ property at the first match location."
 	 (len (length cand)) cat)
     (cond
      ;; left-truncate recent files in consult-buffer
-     ((and-let* ((type (get-text-property 0 'multi-category cand)))
-	(eq (car-safe type) 'file))
+     ((or (eq (vertico--metadata-get 'category) 'file)
+	  (and-let* ((type (get-text-property 0 'multi-category cand)))
+	    (eq (car-safe type) 'file)))
       (let* ((suffix-len (length (nth 2 args)))
-	     (ww  (vertico--window-width))
+	     (ww (vertico--window-width))
 	     (w (max 30 (- ww suffix-len))))
 	(when (> len w)
 	  (setcar args
