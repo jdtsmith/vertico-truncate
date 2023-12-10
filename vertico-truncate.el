@@ -97,11 +97,11 @@ property at the first match location."
 (defun vertico-truncate--trim-candidates (args)
   "Left truncate consult recentf and long-line candidates among ARGS."
   (let* ((cand (car args))
-	 (len (length cand)) cat)
+	 (len (length cand)))
     (cond
      ;; left-truncate recent files in consult-buffer
      ((or (eq (vertico--metadata-get 'category) 'file)
-	  (and-let* ((type (get-text-property 0 'multi-category cand)))
+	  (when-let ((type (get-text-property 0 'multi-category cand)))
 	    (eq (car-safe type) 'file)))
       (let* ((suffix-len (length (nth 2 args)))
 	     (ww (vertico--window-width))
