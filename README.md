@@ -1,7 +1,7 @@
 # vertico-truncate
 Judicious truncation for long candidates in [vertico](https://github.com/minad/vertico) completion.
 
-Left-truncates completion lines in vertico for two situations:
+Left-truncates completion lines in vertico for ~two~ one situations:
 
 1. Longer files, which would otherwise move the
  suffix over (e.g. marginalia data), are left-truncated to avoid
